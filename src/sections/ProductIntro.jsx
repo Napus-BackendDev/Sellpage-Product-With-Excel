@@ -100,7 +100,7 @@ export function ProductIntro() {
       timeValTh: "วันแรก",
       title: "คันทรมาน กลิ่นสาบแรง",
       statusLabel: "ระยะติดเชื้อและอักเสบ",
-      mockImageText: "ภาพผิวอักเสบแดงคัน / ส่งกลิ่นสาบ",
+      image: "/timeline_step1.png",
       desc: "สัตว์เลี้ยงคันและเกาตลอดเวลา ผิวแดงถลอก ขนร่วง และมีกลิ่นสาบอับชื้นสะสมตามจุดอับต่างๆ ทรมานและเครียด",
       mechanism: "สารสกัดนาโนซิลเวอร์เข้าฆ่าเชื้อแบคทีเรียและยีสต์ลึกถึงเซลล์ต้นตอที่เป็นสาเหตุของโรคผิวหนังทันที"
     },
@@ -109,7 +109,7 @@ export function ProductIntro() {
       timeValTh: "วันที่ 2-3",
       title: "คันลดลง กลิ่นจางหาย",
       statusLabel: "ระยะปลอบประโลมผิว",
-      mockImageText: "ภาพผิวเริ่มแห้ง รอยแดงจางลง",
+      image: "/timeline_step2.png",
       desc: "อาการเกาลดลง ผดผื่นแดงและแผลถลอกแห้งตัวลงอย่างเห็นได้ชัด กลิ่นอับหายไป สัตว์เลี้ยงนอนหลับสบายผ่อนคลายขึ้น",
       mechanism: "สารสกัดคาโมมายล์และบัวบกซึมบำบัดลึกเพื่อลดอาการอักเสบระคายเคืองและบวมแดง พร้อมเติมความชุ่มชื้น"
     },
@@ -118,7 +118,7 @@ export function ProductIntro() {
       timeValTh: "วันที่ 5-7",
       title: "ผิวสมาน สะเก็ดหลุดร่วง",
       statusLabel: "ระยะสมานเซลล์ผิว",
-      mockImageText: "ภาพสะเก็ดแผลหลุด ผิวเริ่มเรียบเนียน",
+      image: "/timeline_step3.png",
       desc: "ผิวหนังที่เคยอักเสบหายสนิท สะเก็ดรังแคหลุดร่วงหมดไป ผิวชุ่มชื้นเรียบเนียนขึ้น เส้นขนเริ่มกลับมาขึ้นใหม่",
       mechanism: "สารต้านอนุมูลอิสระจากมังคุดและคอฟฟี่เชอร์รี่ฟื้นฟูโครงสร้างเซลล์ผิวหนังใหม่ เร่งสมานแผลถลอกจากการเกา"
     },
@@ -127,7 +127,7 @@ export function ProductIntro() {
       timeValTh: "วันที่ 14+",
       title: "ผิวแข็งแรง ขนใหม่ขึ้นฟู",
       statusLabel: "ระยะต้านโรคผิวหนังถาวร",
-      mockImageText: "ภาพผิวสุขภาพดี ขนใหม่หนานุ่มเงางาม",
+      image: "/timeline_step4.png",
       desc: "เส้นขนใหม่ขึ้นหนานุ่มเงางาม ผิวหนังสุขภาพดีมีเกราะคุ้มกัน ปราศจากกลิ่นตัว สัตว์เลี้ยงร่าเริงกลับมาคลุกคลีได้มั่นใจ",
       mechanism: "ทีทรีออยล์และพลูคาวธรรมชาติสร้างภูมิต้านทานผิวหนัง ป้องกันการติดเชื้อสะสมและไม่กลับมาเป็นซ้ำ"
     }
@@ -182,13 +182,13 @@ export function ProductIntro() {
                       transition={{ duration: 0.5, delay: idx * 0.15 }}
                       className="bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col items-center text-center relative z-10 flex-1 overflow-hidden"
                     >
-                      {/* Mock Image Container (At the very top, flush with borders) */}
-                      <div className="w-full aspect-[4/3] overflow-hidden relative text-charcoal/40 bg-slate-50 border-b-2 border-slate-100 flex flex-col items-center justify-center shrink-0">
-                        <div className="absolute inset-0 bg-gradient-to-br from-slate-50 to-slate-100/60" />
-                        <Image className="w-8 h-8 text-charcoal/30 mb-2 z-10" />
-                        <span className="text-[10px] font-bold text-charcoal/60 uppercase tracking-wider z-10 px-4 text-center">
-                          {step.mockImageText}
-                        </span>
+                      {/* Real Image Container (At the very top, flush with borders) */}
+                      <div className="w-full aspect-[4/3] overflow-hidden relative border-b-2 border-slate-100 shrink-0">
+                        <img 
+                          src={step.image} 
+                          alt={step.title} 
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                        />
                       </div>
 
                       {/* Rounded Rectangle Marker in the center (overlapping the border line) */}
