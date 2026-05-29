@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #0A2540;
+  --color-charcoal: #333333;
+  --color-light: #F5F7FA;
+  --font-sans: 'Inter', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  
+  --animate-marquee: marquee 25s linear infinite;
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.333333%); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-light);
+    color: var(--color-charcoal);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-navy);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
