@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Leaf, ShieldCheck, Ban, Droplets, Sparkles, Heart, PawPrint, Award, Image } from 'lucide-react'
 
 export function CustomerResults() {
-  const reviewImageSrc = "" // ใส่ที่อยู่รูปภาพขนาดใหญ่ตรงนี้ เช่น "/customer_thankyou_banner.png"
+  const reviewImageSrc = "/customer_thankyou_banner.png"
 
   const specs = [
     {
