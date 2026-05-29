@@ -60,7 +60,7 @@ export function CheckoutForm({ selectedPackage, setSelectedPackage, isExpired })
       paymentMethod: "COD",
     }
 
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzfsJitXsLNYHd_KJhJ-WV2aFb1Dvqgjf1DsMYos_MVDqyBo05tWyUSlDzZqRVe4SWn/exec"
+    const GOOGLE_SCRIPT_URL = import.meta.env.VITE_GOOGLE_SCRIPT_URL;
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
