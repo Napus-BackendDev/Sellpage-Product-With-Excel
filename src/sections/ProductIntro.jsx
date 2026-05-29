@@ -157,16 +157,6 @@ export function ProductIntro() {
               </p>
             </motion.div>
           </div>
-          
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-full max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-2xl border border-gray-100 mb-16"
-          >
-            <img src="/empathy_banner.png" alt="Happy pet and owner" className="w-full h-auto object-cover" />
-          </motion.div>
 
           {/* Timeline Wrapper */}
           <div className="relative mt-12">
